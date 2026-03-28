@@ -1,0 +1,32 @@
+spring:
+  application:
+    name: enrollment-service
+  datasource:
+    url: jdbc:postgresql://localhost:5432/learning_platform
+    username: postgres
+    password: password
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+
+server:
+  port: 8003
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    preferIpAddress: true
+
+jwt:
+  secret: mySecretKeyForJWTTokenGenerationAndValidationPurpose

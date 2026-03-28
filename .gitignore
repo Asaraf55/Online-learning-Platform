@@ -1,0 +1,29 @@
+# Dependencies
+node_modules/
+
+# Production Build Output (Frontend)
+dist/
+dist-ssr/
+
+# Local Environment Variables & Secrets
+.env
+.env.local
+.env.*
+application-secret.properties
+
+# Java Backend Compilation Outputs & Artifacts
+target/
+*.jar
+*.war
+*.ear
+
+# IDE and OS Configurations
+.idea/
+.vscode/
+.eclipse/
+.DS_Store
+Thumbs.db
+
+# Private Interview Documents
+GeeksLearning_Backend_Interview.md
+interview_prep.md
