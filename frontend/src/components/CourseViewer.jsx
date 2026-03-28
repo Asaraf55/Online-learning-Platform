@@ -116,11 +116,11 @@ export default function CourseViewer({ courseId, courses }) {
       </div>
 
       {/* Main Split-Pane Architecture */}
-      <div style={{display: 'flex', flex: 1, overflow: 'hidden'}}>
+      <div className="course-viewer-split" style={{display: 'flex', flex: 1, overflow: 'hidden'}}>
         
         {/* Left Nav Sidebar */}
         {isSidebarVisible && (
-          <aside style={{width: '320px', background: 'rgba(0,0,0,0.05)', borderRight: '1px solid var(--border-subtle)', overflowY: 'auto', padding: '20px', transition: 'border-color 0.5s ease'}}>
+          <aside className="course-viewer-sidebar" style={{width: '320px', background: 'rgba(0,0,0,0.05)', borderRight: '1px solid var(--border-subtle)', overflowY: 'auto', padding: '20px', transition: 'border-color 0.5s ease'}}>
              <h3 style={{fontSize: '1rem', color: 'var(--text-muted)', textTransform: 'uppercase', letterSpacing: '1px', marginBottom: '20px'}}>Course Modules</h3>
              
              {courseContents.length === 0 ? (
@@ -170,7 +170,7 @@ export default function CourseViewer({ courseId, courses }) {
         )}
 
         {/* Deep Content Rendering Pane */}
-        <main style={{flex: 1, padding: '40px 60px', overflowY: 'auto', background: 'var(--bg-base)', transition: 'background-color 0.5s ease'}}>
+        <main className="course-viewer-content" style={{flex: 1, padding: '40px 60px', overflowY: 'auto', background: 'var(--bg-base)', transition: 'background-color 0.5s ease'}}>
            {!activeSubtopic ? (
              <div style={{textAlign: 'center', marginTop: '100px', padding: '40px', background: 'var(--bg-surface)', borderRadius: '12px', border: '1px solid var(--border-subtle)'}}>
                 <h2 style={{color: 'var(--text-muted)'}}>Select a subtopic from the sidebar to begin learning.</h2>

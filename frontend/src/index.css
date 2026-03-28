@@ -461,3 +461,83 @@ select option {
   --shadow-glass: 0 8px 32px 0 rgba(0, 0, 0, 0.05);
   --shadow-glow: 0 4px 15px rgba(139, 92, 246, 0.15);
 }
+
+/* -------------------------------------------
+   RESPONSIVE GLOBAL UI ARCHITECTURE
+------------------------------------------- */
+@media screen and (max-width: 1024px) {
+  .main-layout {
+    flex-direction: column;
+  }
+  .sidebar {
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid var(--border-subtle);
+    padding: 15px 20px;
+  }
+  .sidebar-menu {
+    flex-direction: row;
+    overflow-x: auto;
+    padding-bottom: 5px;
+    gap: 15px;
+  }
+  .sidebar-menu li {
+    flex: 0 0 auto;
+    white-space: nowrap;
+    padding: 10px 18px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  /* Core Spacing Destructuring */
+  .header {
+    height: auto;
+    flex-direction: column;
+    padding: 15px 20px;
+    gap: 15px;
+  }
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+  }
+  .nav-links a {
+    font-size: 0.85rem;
+  }
+  .content-area {
+    padding: 25px 15px;
+  }
+  
+  /* Course Grid Compression */
+  .course-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+  .page-title {
+    font-size: 2rem;
+  }
+  
+  /* Course Viewer Split-Pane Squash */
+  .course-viewer-split {
+    flex-direction: column !important;
+  }
+  .course-viewer-sidebar {
+    width: 100% !important;
+    max-height: 250px;
+    border-right: none !important;
+    border-bottom: 1px solid var(--border-subtle) !important;
+    padding: 15px !important;
+  }
+  .course-viewer-content {
+    padding: 20px 15px !important;
+  }
+  
+  /* Celebration Modal Resizing */
+  .completion-modal-card {
+    padding: 40px 20px !important;
+    width: 90%;
+  }
+  .completion-modal-card h1 {
+    font-size: 1.8rem !important;
+  }
+}
